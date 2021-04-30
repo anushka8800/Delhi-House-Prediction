@@ -37,8 +37,8 @@ function onClickedEstimatePrice() {
     var furnishing_status = document.getElementById("uiFurnishing");
     var estPrice = document.getElementById("uiEstimatedPrice");
 
-    //var url = "http://127.0.0.1:5000/predict_home_price";
-    var url = "/api/predict_home_price";
+    var url = "http://127.0.0.1:5000/predict_home_price";
+    //var url = "/api/predict_home_price";
 
     $.post(url, {
         area: parseFloat(area.value),
@@ -55,8 +55,8 @@ function onClickedEstimatePrice() {
 
 function onPageLoad() {
     console.log("document loaded");
-    //var url = "http://127.0.0.1:5000/get_furnishing_status";
-    var url = "/api/get_furnishing_status";
+    var url = "http://127.0.0.1:5000/get_furnishing_status";
+    //var url = "/api/get_furnishing_status";
     $.get (url,function(data, status) {
         console.log("got response for get_furnishing_status request");
         if(data) {
